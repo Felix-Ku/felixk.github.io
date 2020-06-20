@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Onism</title>
+  
+  <subtitle>Felix&#39;s blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-06-20T05:46:03.171Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>FelixK</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello HEXO</title>
+    <link href="http://yoursite.com/2020/06/18/hello-world/"/>
+    <id>http://yoursite.com/2020/06/18/hello-world/</id>
+    <published>2020-06-18T13:24:36.000Z</published>
+    <updated>2020-06-20T05:46:03.171Z</updated>
+    
+    <content type="html"><![CDATA[<h2><span id="hello-hexo">Hello HEXO</span></h2><p>A tiny documentation to remind myself the basics of HEXO.</p><h2><span id="hexo">HEXO</span></h2><p>The following commands should be used while pointing the root folder of “blog”.</p><h3><span id="basics">Basics</span></h3><ul><li>blog/_config.yml : Global info of user</li><li>blog/public : Generated website documents</li></ul><h3><span id="blog_configyml">blog/_config.yml</span></h3><ul><li>theme : Change your desired theme to be the same as the name of the folder</li></ul><h3><span id="create-a-new-post">Create a new post</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3><span id="generate-static-files">Generate static files</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo generateor$ hexo g</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3><span id="run-server">Run server</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo serveror$ hexo s</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3><span id="local-address">Local address</span></h3><pre><code>http://localhost:4000</code></pre><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2><span id="hexo-nexteditor">HEXO - NextEditor</span></h2><p>A useful editor interface for “Next” themes.</p><h3><span id="editor-address">Editor address</span></h3><pre><code>http://localhost:2048</code></pre><h3><span id="run-editor-server">Run Editor server</span></h3><p>This commend should be used while pointing the root folder of hexo-editor.</p><p>i.e. blog\themes\hexo-editor&gt;</p><pre><code>npm start</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;&lt;span id=&quot;hello-hexo&quot;&gt;Hello HEXO&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;A tiny documentation to remind myself the basics of HEXO.&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&quot;hexo&quot;&gt;HEXO&lt;/s
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Testing (Functions)</title>
+    <link href="http://yoursite.com/2020/06/18/Untitled/"/>
+    <id>http://yoursite.com/2020/06/18/Untitled/</id>
+    <published>2020-06-18T01:52:05.630Z</published>
+    <updated>2020-06-18T14:24:13.839Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello World</p><p><img src="/images/tumblr_b7950848d6e2049b49c30ffb68213d09_d150b932_1280.jpg" alt></p><p>Testing image import, tags, categories.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hello World&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/tumblr_b7950848d6e2049b49c30ffb68213d09_d150b932_1280.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;Testing image import, tags, c
+      
+    
+    </summary>
+    
+    
+      <category term="Anime" scheme="http://yoursite.com/categories/Anime/"/>
+    
+    
+      <category term="Anime" scheme="http://yoursite.com/tags/Anime/"/>
+    
+  </entry>
+  
+</feed>
