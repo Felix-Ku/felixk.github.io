@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello HEXO, Onism">
+    <meta name="keywords" content="Daily LEET (Q12), Onism">
     <meta name="description" content="A peaceful place for my thoughts">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello HEXO | Onism</title>
+    <title>Daily LEET (Q12) | Onism</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -224,12 +224,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/%5Cmedias%5Ccode.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello HEXO</h1>
+                    <h1 class="description center-align post-title">Daily LEET (Q12)</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HEXO/">
-                                <span class="chip bg-color">HEXO</span>
+                            <a href="/tags/Leet-code/">
+                                <span class="chip bg-color">Leet code</span>
                             </a>
                         
                     </div>
@@ -358,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Web/" class="post-category">
-                                Web
+                            <a href="/categories/Coding-practices/" class="post-category">
+                                Coding practices
                             </a>
                         
                     </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-24
                 </div>
                 
 
@@ -380,7 +380,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    135
+                    164
                 </div>
                 
 
@@ -397,31 +397,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><span id="hello-hexo">Hello HEXO</span></h2><p>A tiny documentation to remind myself the basics of HEXO.</p>
-<h2><span id="hexo">HEXO</span></h2><p>The following commands should be used while pointing the root folder of “blog”.</p>
-<h3><span id="basics">Basics</span></h3><ul>
-<li>blog/_config.yml : Global info of user</li>
-<li>blog/public : Generated website documents</li>
+                <h1><span id="daily-leet-q12-integer-to-roman">Daily LEET - Q12 (Integer to Roman)</span></h1><p>2020-XX-XX</p>
+<p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank" rel="noopener">Link to Question</a></p>
+<ul>
+<li>Objective: To convert integer into Roman Numeral</li>
+<li>Level of difficulty: Medium</li>
+<li>Language used: C++</li>
 </ul>
-<h3><span id="blog_configyml">blog/_config.yml</span></h3><ul>
-<li>theme : Change your desired theme to be the same as the name of the folder</li>
+<h2><span id="result">Result</span></h2><ul>
+<li>Runtime: 12 ms <em>(faster than 70.86%)</em> <em>For reference only</em></li>
+<li>Memory Usage: 5.9 MB <em>(less than 89.33%)</em> <em>For reference only</em></li>
 </ul>
-<h3><span id="create-a-new-post">Create a new post</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3><span id="generate-static-files">Generate static files</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-or
-$ hexo g</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3><span id="run-server">Run server</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-or
-$ hexo s</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3><span id="local-address">Local address</span></h3><pre><code>http://localhost:4000</code></pre><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h2><span id="hexo-nexteditor">HEXO - NextEditor</span></h2><p>A useful editor interface for “Next” themes.</p>
-<h3><span id="editor-address">Editor address</span></h3><pre><code>http://localhost:2048</code></pre><h3><span id="run-editor-server">Run Editor server</span></h3><p>This commend should be used while pointing the root folder of hexo-editor.</p>
-<p>i.e. blog\themes\hexo-editor&gt;</p>
-<pre><code>npm start</code></pre>
+<h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        string output<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> value<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">900</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        string valueS<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"M"</span><span class="token punctuation">,</span><span class="token string">"CM"</span><span class="token punctuation">,</span><span class="token string">"D"</span><span class="token punctuation">,</span><span class="token string">"CD"</span><span class="token punctuation">,</span><span class="token string">"C"</span><span class="token punctuation">,</span><span class="token string">"XC"</span><span class="token punctuation">,</span><span class="token string">"L"</span><span class="token punctuation">,</span><span class="token string">"XL"</span><span class="token punctuation">,</span><span class="token string">"X"</span><span class="token punctuation">,</span><span class="token string">"IX"</span><span class="token punctuation">,</span><span class="token string">"V"</span><span class="token punctuation">,</span><span class="token string">"IV"</span><span class="token punctuation">,</span><span class="token string">"I"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> count<span class="token operator">=</span>num<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> pos<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>count<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>count<span class="token operator">>=</span>value<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                count<span class="token operator">=</span>count<span class="token operator">-</span>value<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span>valueS<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+                pos<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> output<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2><span id="notes">Notes</span></h2><ul>
+<li>Kinda like brutal force</li>
+<li>After observation, Roman numerals changes representation method while:<ul>
+<li>Changes from adding up into substracting down</li>
+<li>4 -&gt; IV</li>
+<li>9 -&gt; IX</li>
+<li>40 -&gt; XL</li>
+<li>90 -&gt; XC</li>
+<li>400 -&gt; CD</li>
+<li>900 -&gt; CM</li>
+<li>Therefore adding the above into tracking array can enhance direct convertion</li>
+</ul>
+</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -434,8 +456,8 @@ $ hexo s</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/HEXO/">
-                                    <span class="chip bg-color">HEXO</span>
+                                <a href="/tags/Leet-code/">
+                                    <span class="chip bg-color">Leet code</span>
                                 </a>
                             
                         </div>
@@ -477,31 +499,33 @@ $ hexo s</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/06/24/Daily%20LEET%20(Q13)/">
+                <a href="/2020/06/24/Daily%20LEET%20(Q12)/">
                     <div class="card-image">
                         
-                        <img src="/%5Cmedias%5Ccode.jpg" class="responsive-img" alt="Daily LEET (Q13)">
+                        <img src="/%5Cmedias%5Ccode.jpg" class="responsive-img" alt="Daily LEET (Q12)">
                         
-                        <span class="card-title">Daily LEET (Q13)</span>
+                        <span class="card-title">Daily LEET (Q12)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Daily LEET - Q13 (Roman to Integer)2020-06-24
+                            Daily LEET - Q12 (Integer to Roman)2020-XX-XX
 Link to Question
 
-Objective: To convert given roman numeral string into an
+Objective: To convert integer into Roman Numeral
+Level o
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -514,6 +538,7 @@ Objective: To convert given roman numeral string into an
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -532,33 +557,33 @@ Objective: To convert given roman numeral string into an
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/18/Untitled/">
+                <a href="/2020/06/24/Daily%20LEET%20(Q3)/">
                     <div class="card-image">
                         
-                        <img src="/%5Cmedias%5Charu.jpg" class="responsive-img" alt="Testing (Functions)">
+                        <img src="/%5Cmedias%5Ccode.jpg" class="responsive-img" alt="Daily LEET (Q3)">
                         
-                        <span class="card-title">Testing (Functions)</span>
+                        <span class="card-title">Daily LEET (Q3)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-Hello World
-Testing image import, tags, categories.
+                            Daily LEET - Q3 (Longest Substring Without Repeating Characters)2020-06-24
+Link to Question
 
+Objective: Given a string, 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Anime/" class="post-category">
-                                    Anime
+                            <a href="/categories/Coding-practices/" class="post-category">
+                                    Coding practices
                                 </a>
                             
                             
@@ -568,8 +593,8 @@ Testing image import, tags, categories.
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Anime/">
-                        <span class="chip bg-color">Anime</span>
+                    <a href="/tags/Leet-code/">
+                        <span class="chip bg-color">Leet code</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-20T05:46:03.171Z</updated>
+  <updated>2020-06-24T14:28:03.713Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Daily LEET (Q12)</title>
+    <link href="http://yoursite.com/2020/06/24/Daily%20LEET%20(Q12)/"/>
+    <id>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q12)/</id>
+    <published>2020-06-24T12:47:46.000Z</published>
+    <updated>2020-06-24T14:28:03.713Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="daily-leet-q12-integer-to-roman">Daily LEET - Q12 (Integer to Roman)</span></h1><p>2020-XX-XX</p><p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank" rel="noopener">Link to Question</a></p><ul><li>Objective: To convert integer into Roman Numeral</li><li>Level of difficulty: Medium</li><li>Language used: C++</li></ul><h2><span id="result">Result</span></h2><ul><li>Runtime: 12 ms <em>(faster than 70.86%)</em> <em>For reference only</em></li><li>Memory Usage: 5.9 MB <em>(less than 89.33%)</em> <em>For reference only</em></li></ul><h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span><span class="token keyword">public</span><span class="token operator">:</span>    string <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>        string output<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> value<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">900</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>        string valueS<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"M"</span><span class="token punctuation">,</span><span class="token string">"CM"</span><span class="token punctuation">,</span><span class="token string">"D"</span><span class="token punctuation">,</span><span class="token string">"CD"</span><span class="token punctuation">,</span><span class="token string">"C"</span><span class="token punctuation">,</span><span class="token string">"XC"</span><span class="token punctuation">,</span><span class="token string">"L"</span><span class="token punctuation">,</span><span class="token string">"XL"</span><span class="token punctuation">,</span><span class="token string">"X"</span><span class="token punctuation">,</span><span class="token string">"IX"</span><span class="token punctuation">,</span><span class="token string">"V"</span><span class="token punctuation">,</span><span class="token string">"IV"</span><span class="token punctuation">,</span><span class="token string">"I"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> count<span class="token operator">=</span>num<span class="token punctuation">;</span>        <span class="token keyword">int</span> pos<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>count<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>count<span class="token operator">>=</span>value<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">)</span>            <span class="token punctuation">{</span>                count<span class="token operator">=</span>count<span class="token operator">-</span>value<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">;</span>                output<span class="token operator">=</span>output<span class="token operator">+</span>valueS<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">else</span>                pos<span class="token operator">++</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> output<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><h2><span id="notes">Notes</span></h2><ul><li>Kinda like brutal force</li><li>After observation, Roman numerals changes representation method while:<ul><li>Changes from adding up into substracting down</li><li>4 -&gt; IV</li><li>9 -&gt; IX</li><li>40 -&gt; XL</li><li>90 -&gt; XC</li><li>400 -&gt; CD</li><li>900 -&gt; CM</li><li>Therefore adding the above into tracking array can enhance direct convertion</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;daily-leet-q12-integer-to-roman&quot;&gt;Daily LEET - Q12 (Integer to Roman)&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;2020-XX-XX&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode
+      
+    
+    </summary>
+    
+    
+      <category term="Coding practices" scheme="http://yoursite.com/categories/Coding-practices/"/>
+    
+    
+      <category term="Leet code" scheme="http://yoursite.com/tags/Leet-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Daily LEET (Q3)</title>
+    <link href="http://yoursite.com/2020/06/24/Daily%20LEET%20(Q3)/"/>
+    <id>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q3)/</id>
+    <published>2020-06-24T12:43:10.000Z</published>
+    <updated>2020-06-24T14:27:55.380Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="daily-leet-q3-longest-substring-without-repeating-characters">Daily LEET - Q3 (Longest Substring Without Repeating Characters)</span></h1><p>2020-06-24</p><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Link to Question</a></p><ul><li>Objective: Given a string, find the length of the longest substring without repeating characters.</li><li>Level of difficulty: Medium</li><li>Language used: C++</li></ul><h2><span id="result">Result</span></h2><ul><li>Runtime:  12 ms <em>(faster than 91.25%)</em> <em>For reference only</em></li><li>Memory Usage:  7.1 MB <em>(less than 82.90%)</em> <em>For reference only</em></li></ul><h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span><span class="token keyword">public</span><span class="token operator">:</span>    <span class="token keyword">int</span> <span class="token function">lengthOfLongestSubstring</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token operator">==</span><span class="token string">""</span><span class="token punctuation">)</span>            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> head<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> LongestSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> CurrentSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">bool</span> breaked<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>        <span class="token punctuation">{</span>               breaked<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>            CurrentSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>head<span class="token punctuation">;</span>j<span class="token operator">&lt;</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>            <span class="token punctuation">{</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>                <span class="token punctuation">{</span>                    head<span class="token operator">=</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>                    breaked<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>                    <span class="token keyword">break</span><span class="token punctuation">;</span>                <span class="token punctuation">}</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">!=</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>breaked<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                    CurrentSize<span class="token operator">=</span>CurrentSize<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>CurrentSize<span class="token operator">></span>LongestSize<span class="token punctuation">)</span>                LongestSize<span class="token operator">=</span>CurrentSize<span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token keyword">return</span> LongestSize<span class="token punctuation">;</span>        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><h2><span id="notes">Notes</span></h2><ul><li>O(n^2)?</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;daily-leet-q3-longest-substring-without-repeating-characters&quot;&gt;Daily LEET - Q3 (Longest Substring Without Repeating Characters)
+      
+    
+    </summary>
+    
+    
+      <category term="Coding practices" scheme="http://yoursite.com/categories/Coding-practices/"/>
+    
+    
+      <category term="Leet code" scheme="http://yoursite.com/tags/Leet-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Daily LEET (Q13)</title>
+    <link href="http://yoursite.com/2020/06/24/Daily%20LEET%20(Q13)/"/>
+    <id>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q13)/</id>
+    <published>2020-06-24T04:29:20.666Z</published>
+    <updated>2020-06-24T14:27:53.239Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="daily-leet-q13-roman-to-integer">Daily LEET - Q13 (Roman to Integer)</span></h1><p>2020-06-24</p><p><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" rel="noopener">Link to Question</a></p><ul><li>Objective: To convert given roman numeral string into an integer</li><li>Level of difficulty: Easy</li><li>Language used: C++</li></ul><h2><span id="result">Result</span></h2><ul><li>Runtime: 4 ms <em>(faster than 98.05%)</em> <em>For reference only</em></li><li>Memory Usage: 6.1 MB <em>(less than 61.77% of C++)</em> <em>For reference only</em></li></ul><h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span><span class="token keyword">public</span><span class="token operator">:</span>    <span class="token keyword">int</span> <span class="token function">romanToDigit</span><span class="token punctuation">(</span><span class="token keyword">char</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">switch</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">case</span> <span class="token string">'I'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'V'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">5</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'X'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">10</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'L'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">50</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'C'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">100</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'D'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">500</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'M'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">1000</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">int</span> <span class="token function">romanToInt</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> store<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> last<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>        <span class="token punctuation">{</span>            temp<span class="token operator">=</span><span class="token function">romanToDigit</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            store<span class="token operator">=</span>store<span class="token operator">+</span>temp<span class="token punctuation">;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token operator">></span>last<span class="token punctuation">)</span>                store<span class="token operator">=</span>store<span class="token number">-2</span><span class="token operator">*</span>last<span class="token punctuation">;</span>            last<span class="token operator">=</span>temp<span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> store<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><h2><span id="notes">Notes</span></h2><ul><li>Can add up value of letters first then substract the double of the previous letter if the following letter is larger than the previous one</li><li>Reduce memory usage?</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;daily-leet-q13-roman-to-integer&quot;&gt;Daily LEET - Q13 (Roman to Integer)&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;2020-06-24&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode
+      
+    
+    </summary>
+    
+    
+      <category term="Coding practices" scheme="http://yoursite.com/categories/Coding-practices/"/>
+    
+    
+      <category term="Leet code" scheme="http://yoursite.com/tags/Leet-code/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello HEXO</title>
@@ -48,17 +128,18 @@
     <link href="http://yoursite.com/2020/06/18/Untitled/"/>
     <id>http://yoursite.com/2020/06/18/Untitled/</id>
     <published>2020-06-18T01:52:05.630Z</published>
-    <updated>2020-06-18T14:24:13.839Z</updated>
+    <updated>2020-06-24T14:18:59.063Z</updated>
     
-    <content type="html"><![CDATA[<p>Hello World</p><p><img src="/images/tumblr_b7950848d6e2049b49c30ffb68213d09_d150b932_1280.jpg" alt></p><p>Testing image import, tags, categories.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/haru.jpg" alt="HARU"></p><p>Hello World</p><p>Testing image import, tags, categories.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Hello World&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/tumblr_b7950848d6e2049b49c30ffb68213d09_d150b932_1280.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;Testing image import, tags, c
+        &lt;p&gt;&lt;img src=&quot;/images/haru.jpg&quot; alt=&quot;HARU&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hello World&lt;/p&gt;
+&lt;p&gt;Testing image import, tags, categories.&lt;/p&gt;
+
       
     
     </summary>
