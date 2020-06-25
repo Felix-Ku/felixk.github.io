@@ -224,7 +224,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/code.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -380,14 +380,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    164
+                    332
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Reading Time&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -397,18 +397,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="daily-leet-q12-integer-to-roman">Daily LEET - Q12 (Integer to Roman)</span></h1><p>2020-XX-XX</p>
+                <h1><span id="daily-leet-q12-integer-to-roman">Daily LEET - Q12 (Integer to Roman)</span></h1><p>2020-06-25</p>
 <p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank" rel="noopener">Link to Question</a></p>
 <ul>
 <li>Objective: To convert integer into Roman Numeral</li>
 <li>Level of difficulty: Medium</li>
 <li>Language used: C++</li>
 </ul>
-<h2><span id="result">Result</span></h2><ul>
+<h2><span id="result">Result</span></h2><h3><span id="first-trial">First trial</span></h3><ul>
 <li>Runtime: 12 ms <em>(faster than 70.86%)</em> <em>For reference only</em></li>
 <li>Memory Usage: 5.9 MB <em>(less than 89.33%)</em> <em>For reference only</em></li>
 </ul>
-<h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h3><span id="second-trial">Second trial</span></h3><p>More intuitive method</p>
+<ul>
+<li>Runtime: 8 ms <em>(faster than 88.34%)</em> <em>For reference only</em></li>
+<li>Memory Usage: 6 MB <em>(less than 78.85%)</em> <em>For reference only</em></li>
+</ul>
+<h2><span id="code">Code</span></h2><h3><span id="first-trial">First trial</span></h3><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
 <span class="token keyword">public</span><span class="token operator">:</span>
     string <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         string output<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
@@ -425,6 +430,82 @@
             <span class="token punctuation">}</span>
             <span class="token keyword">else</span>
                 pos<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> output<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h3><span id="second-trial">Second trial</span></h3><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        string output<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>num<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-1000</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"M"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">900</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-900</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"CM"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">500</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-500</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"D"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">400</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-400</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"CD"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">100</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-100</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"C"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">90</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-90</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"XC"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">50</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-50</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"L"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">40</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-40</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"XL"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">10</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-10</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"X"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">9</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-9</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"IX"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">5</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-5</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"V"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token operator">>=</span><span class="token number">4</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-4</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"IV"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                num<span class="token operator">=</span>num<span class="token number">-1</span><span class="token punctuation">;</span>
+                output<span class="token operator">=</span>output<span class="token operator">+</span><span class="token string">"I"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> output<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -507,7 +588,8 @@
                 <a href="/2020/06/24/Daily%20LEET%20(Q12)/">
                     <div class="card-image">
                         
-                        <img src="/medias/code.jpg" class="responsive-img" alt="Daily LEET (Q12)">
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Daily LEET (Q12)">
                         
                         <span class="card-title">Daily LEET (Q12)</span>
                     </div>
@@ -515,7 +597,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Daily LEET - Q12 (Integer to Roman)2020-XX-XX
+                            Daily LEET - Q12 (Integer to Roman)2020-06-25
 Link to Question
 
 Objective: To convert integer into Roman Numeral
@@ -747,7 +829,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Word count:&nbsp;<span
-                class="white-color">611</span>&nbsp;字
+                class="white-color">779</span>&nbsp;字
             
             
             
