@@ -8,24 +8,56 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q12)/</loc>
-        <lastmod>2020-06-25T06:02:41.044Z</lastmod>
+        <loc>http://yoursite.com/2020/09/13/Japanese%20learning/</loc>
+        <lastmod>2021-03-26T14:00:01.854Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q3)/</loc>
-        <lastmod>2020-06-24T14:46:22.441Z</lastmod>
+        <loc>http://yoursite.com/2021/02/26/Django%20basics%20/</loc>
+        <lastmod>2021-03-26T13:56:36.848Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://yoursite.com/2020/06/24/Daily%20LEET%20(Q13)/</loc>
-        <lastmod>2020-06-24T14:46:14.812Z</lastmod>
+        <loc>http://yoursite.com/2021/01/17/SQL%20basics/</loc>
+        <lastmod>2021-03-26T13:56:32.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2020/12/25/Agile%20software%20development/</loc>
+        <lastmod>2021-03-26T13:51:18.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/</loc>
+        <lastmod>2021-03-26T13:41:24.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2020/09/24/Daily%20LEET%20(Q3)/</loc>
+        <lastmod>2021-03-26T13:41:13.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2020/10/24/Daily%20LEET%20(Q12)/</loc>
+        <lastmod>2021-03-26T13:41:06.588Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -3,8 +3,50 @@
 
 
     <url>
+        <loc>http://yoursite.com/tags/language/</loc>
+        <lastmod>2021-03-26T14:00:01.854Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Japanese/</loc>
+        <lastmod>2021-03-26T14:00:01.854Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/django/</loc>
+        <lastmod>2021-03-26T13:56:36.848Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/SQL/</loc>
+        <lastmod>2021-03-26T13:56:32.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Scrum/</loc>
+        <lastmod>2021-03-26T13:51:18.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Agile/</loc>
+        <lastmod>2021-03-26T13:51:18.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/tags/Leet-code/</loc>
-        <lastmod>2020-06-25T06:02:41.044Z</lastmod>
+        <lastmod>2021-03-26T13:41:24.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
