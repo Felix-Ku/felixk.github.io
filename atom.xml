@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-26T13:56:36.848Z</updated>
+  <updated>2021-06-01T12:26:47.337Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu notes</title>
+    <link href="http://yoursite.com/2021/06/01/Ubuntu%20notes/"/>
+    <id>http://yoursite.com/2021/06/01/Ubuntu%20notes/</id>
+    <published>2021-06-01T03:16:45.883Z</published>
+    <updated>2021-06-01T12:26:47.337Z</updated>
+    
+    <content type="html"><![CDATA[<h2><span id="ubuntu-notes">Ubuntu notes</span></h2><p>Notes for problems during installation and setting up dual operating system (Windows 10 &amp; Ubuntu)</p><h2><span id="installation">Installation</span></h2><h3><span id="this-computer-currently-has-no-detected-operating-systems">“This computer currently has no detected operating systems.”</span></h3><ul><li>Disable fast boot in windows power setting</li><li>Launch installation usb in UEFI mode in BIOS</li><li>(Not tested) Disable secure boot</li></ul><h3><span id="perform-mok-management">“Perform MOK management”</span></h3><p>This happens when you ticked the option “Install third-party software” and set a key for that</p><ul><li>enroll mok</li><li>continue</li><li>enroll the key</li><li>input the key </li><li>Restart to finish installation of drivers</li></ul><h2><span id="setting-up">Setting up</span></h2><h3><span id="windows-time-changed-by-ubuntu">Windows time changed by Ubuntu</span></h3><ul><li>Force ubuntu to use local time</li></ul><pre class=" language-bash"><code class="language-bash">timedatectl set-local-rtc 1 --adjust-system-clocktimedatectl</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;&lt;span id=&quot;ubuntu-notes&quot;&gt;Ubuntu notes&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;Notes for problems during installation and setting up dual operating system (Windows 
+      
+    
+    </summary>
+    
+    
+      <category term="notes" scheme="http://yoursite.com/categories/notes/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="ubuntu" scheme="http://yoursite.com/tags/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>Django</title>
@@ -222,35 +250,6 @@
     
     
       <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Testing (Functions)</title>
-    <link href="http://yoursite.com/2020/06/18/Untitled/"/>
-    <id>http://yoursite.com/2020/06/18/Untitled/</id>
-    <published>2020-06-18T01:52:05.630Z</published>
-    <updated>2020-06-24T14:45:37.881Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/haru.jpg" alt="HARU"></p><p>Hello World</p><p>Testing image import, tags, categories.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/haru.jpg&quot; alt=&quot;HARU&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Hello World&lt;/p&gt;
-&lt;p&gt;Testing image import, tags, categories.&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="Anime" scheme="http://yoursite.com/categories/Anime/"/>
-    
-    
-      <category term="Anime" scheme="http://yoursite.com/tags/Anime/"/>
     
   </entry>
   

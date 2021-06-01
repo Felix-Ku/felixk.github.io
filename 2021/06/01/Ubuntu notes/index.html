@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode trial (Q3), Onism">
+    <meta name="keywords" content="Ubuntu notes, Onism">
     <meta name="description" content="A peaceful place for my thoughts">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode trial (Q3) | Onism</title>
+    <title>Ubuntu notes | Onism</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -224,12 +224,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode trial (Q3)</h1>
+                    <h1 class="description center-align post-title">Ubuntu notes</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Leet-code/">
-                                <span class="chip bg-color">Leet code</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="/tags/ubuntu/">
+                                <span class="chip bg-color">ubuntu</span>
                             </a>
                         
                     </div>
@@ -358,8 +362,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Coding-practices/" class="post-category">
-                                Coding practices
+                            <a href="/categories/notes/" class="post-category">
+                                notes
                             </a>
                         
                     </div>
@@ -371,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-09-24
+                    2021-06-01
                 </div>
                 
 
@@ -380,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    136
+                    101
                 </div>
                 
 
@@ -397,55 +401,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="daily-leet-q3-longest-substring-without-repeating-characters">Daily LEET - Q3 (Longest Substring Without Repeating Characters)</span></h1><p>2020-06-24</p>
-<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Link to Question</a></p>
+                <h2><span id="ubuntu-notes">Ubuntu notes</span></h2><p>Notes for problems during installation and setting up dual operating system (Windows 10 &amp; Ubuntu)</p>
+<h2><span id="installation">Installation</span></h2><h3><span id="this-computer-currently-has-no-detected-operating-systems">“This computer currently has no detected operating systems.”</span></h3><ul>
+<li>Disable fast boot in windows power setting</li>
+<li>Launch installation usb in UEFI mode in BIOS</li>
+<li>(Not tested) Disable secure boot</li>
+</ul>
+<h3><span id="perform-mok-management">“Perform MOK management”</span></h3><p>This happens when you ticked the option “Install third-party software” and set a key for that</p>
 <ul>
-<li>Objective: Given a string, find the length of the longest substring without repeating characters.</li>
-<li>Level of difficulty: Medium</li>
-<li>Language used: C++</li>
+<li>enroll mok</li>
+<li>continue</li>
+<li>enroll the key</li>
+<li>input the key </li>
+<li>Restart to finish installation of drivers</li>
 </ul>
-<h2><span id="result">Result</span></h2><ul>
-<li>Runtime:  12 ms <em>(faster than 91.25%)</em> <em>For reference only</em></li>
-<li>Memory Usage:  7.1 MB <em>(less than 82.90%)</em> <em>For reference only</em></li>
+<h2><span id="setting-up">Setting up</span></h2><h3><span id="windows-time-changed-by-ubuntu">Windows time changed by Ubuntu</span></h3><ul>
+<li>Force ubuntu to use local time</li>
 </ul>
-<h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> <span class="token function">lengthOfLongestSubstring</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token operator">==</span><span class="token string">""</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> head<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> LongestSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> CurrentSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">bool</span> breaked<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>   
-            breaked<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-            CurrentSize<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>head<span class="token punctuation">;</span>j<span class="token operator">&lt;</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
-            <span class="token punctuation">{</span>
-
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token punctuation">{</span>
-                    head<span class="token operator">=</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-                    breaked<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-                    <span class="token keyword">break</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">!=</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>breaked<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-                    CurrentSize<span class="token operator">=</span>CurrentSize<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>CurrentSize<span class="token operator">></span>LongestSize<span class="token punctuation">)</span>
-                LongestSize<span class="token operator">=</span>CurrentSize<span class="token punctuation">;</span>
-
-        <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> LongestSize<span class="token punctuation">;</span>    
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<h2><span id="notes">Notes</span></h2><ul>
-<li>O(n^2)?</li>
-</ul>
+<pre class=" language-bash"><code class="language-bash">timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl</code></pre>
 
             </div>
             <hr/>
@@ -459,8 +433,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Leet-code/">
-                                    <span class="chip bg-color">Leet code</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="/tags/ubuntu/">
+                                    <span class="chip bg-color">ubuntu</span>
                                 </a>
                             
                         </div>
@@ -502,50 +480,53 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/10/24/Daily%20LEET%20(Q12)/">
+                <a href="/2021/06/01/Ubuntu%20notes/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="LeetCode trial (Q12)">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Ubuntu notes">
                         
-                        <span class="card-title">LeetCode trial (Q12)</span>
+                        <span class="card-title">Ubuntu notes</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LeetCode trial - Q12 (Integer to Roman)2020-06-25
-Link to Question
-
-Objective: To convert integer into Roman Numeral
-Lev
+                            Ubuntu notesNotes for problems during installation and setting up dual operating system (Windows 10 &amp; Ubuntu)
+Instal
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Coding-practices/" class="post-category">
-                                    Coding practices
+                            <a href="/categories/notes/" class="post-category">
+                                    notes
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Leet-code/">
-                        <span class="chip bg-color">Leet code</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
                     </a>
                     
                 </div>
@@ -559,24 +540,27 @@ Lev
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/13/Japanese%20learning/">
+                <a href="/2021/02/26/Django%20basics%20/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Japanese learning">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Django">
                         
-                        <span class="card-title">Japanese learning</span>
+                        <span class="card-title">Django</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GrammarWords &amp; PhrasesJLPTN5N4N3N2N1Resources
+                            Hello DjangoA tiny documentation to remind myself the basics of Django.
+Setup
+Name of your app = APPNAME
+Name of your ba
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
                             </span>
                         <span class="publish-author">
                             
@@ -589,12 +573,8 @@ Lev
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Japanese/">
-                        <span class="chip bg-color">Japanese</span>
-                    </a>
-                    
-                    <a href="/tags/language/">
-                        <span class="chip bg-color">language</span>
+                    <a href="/tags/django/">
+                        <span class="chip bg-color">django</span>
                     </a>
                     
                 </div>
