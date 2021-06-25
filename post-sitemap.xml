@@ -8,16 +8,8 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2021/02/26/Django%20basics%20/</loc>
-        <lastmod>2021-06-25T07:57:33.225Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://yoursite.com/2020/06/18/hello-world/</loc>
-        <lastmod>2021-06-25T07:56:46.650Z</lastmod>
+        <lastmod>2021-06-25T08:10:01.011Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +17,31 @@
 
     <url>
         <loc>http://yoursite.com/2021/06/01/Ubuntu%20notes/</loc>
-        <lastmod>2021-06-01T12:26:47.337Z</lastmod>
+        <lastmod>2021-06-25T08:09:52.263Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2021/06/25/UX%20learning%20notes/</loc>
+        <lastmod>2021-06-25T08:08:33.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/</loc>
+        <lastmod>2021-06-25T08:07:35.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2021/02/26/Django%20basics%20/</loc>
+        <lastmod>2021-06-25T07:57:33.225Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -50,14 +66,6 @@
     <url>
         <loc>http://yoursite.com/2020/12/25/Agile%20software%20development/</loc>
         <lastmod>2021-03-26T13:51:18.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/</loc>
-        <lastmod>2021-03-26T13:41:24.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

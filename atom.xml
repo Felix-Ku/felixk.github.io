@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-06-01T12:26:47.337Z</updated>
+  <updated>2021-06-25T08:08:33.462Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>UX learning notes</title>
+    <link href="http://yoursite.com/2021/06/25/UX%20learning%20notes/"/>
+    <id>http://yoursite.com/2021/06/25/UX%20learning%20notes/</id>
+    <published>2021-06-25T07:08:03.000Z</published>
+    <updated>2021-06-25T08:08:33.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>New functions testing</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;New functions testing&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="UX" scheme="http://yoursite.com/categories/UX/"/>
+    
+    
+      <category term="UX" scheme="http://yoursite.com/tags/UX/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu notes</title>
     <link href="http://yoursite.com/2021/06/01/Ubuntu%20notes/"/>
     <id>http://yoursite.com/2021/06/01/Ubuntu%20notes/</id>
-    <published>2021-06-01T03:16:45.883Z</published>
-    <updated>2021-06-01T12:26:47.337Z</updated>
+    <published>2021-06-01T03:46:55.000Z</published>
+    <updated>2021-06-25T08:09:52.263Z</updated>
     
     <content type="html"><![CDATA[<h2><span id="ubuntu-notes">Ubuntu notes</span></h2><p>Notes for problems during installation and setting up dual operating system (Windows 10 &amp; Ubuntu)</p><h2><span id="installation">Installation</span></h2><h3><span id="this-computer-currently-has-no-detected-operating-systems">“This computer currently has no detected operating systems.”</span></h3><ul><li>Disable fast boot in windows power setting</li><li>Launch installation usb in UEFI mode in BIOS</li><li>(Not tested) Disable secure boot</li></ul><h3><span id="perform-mok-management">“Perform MOK management”</span></h3><p>This happens when you ticked the option “Install third-party software” and set a key for that</p><ul><li>enroll mok</li><li>continue</li><li>enroll the key</li><li>input the key </li><li>Restart to finish installation of drivers</li></ul><h2><span id="setting-up">Setting up</span></h2><h3><span id="windows-time-changed-by-ubuntu">Windows time changed by Ubuntu</span></h3><ul><li>Force ubuntu to use local time</li></ul><pre class=" language-bash"><code class="language-bash">timedatectl set-local-rtc 1 --adjust-system-clocktimedatectl</code></pre>]]></content>
     
@@ -203,8 +230,8 @@
     <title>LeetCode trial (Q13)</title>
     <link href="http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/"/>
     <id>http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/</id>
-    <published>2020-07-24T04:29:20.666Z</published>
-    <updated>2021-03-26T13:41:24.874Z</updated>
+    <published>2020-07-24T13:22:22.000Z</published>
+    <updated>2021-06-25T08:07:35.654Z</updated>
     
     <content type="html"><![CDATA[<h1><span id="daily-leet-q13-roman-to-integer">Daily LEET - Q13 (Roman to Integer)</span></h1><p>2020-06-24</p><p><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" rel="noopener">Link to Question</a></p><ul><li>Objective: To convert given roman numeral string into an integer</li><li>Level of difficulty: Easy</li><li>Language used: C++</li></ul><h2><span id="result">Result</span></h2><ul><li>Runtime: 4 ms <em>(faster than 98.05%)</em> <em>For reference only</em></li><li>Memory Usage: 6.1 MB <em>(less than 61.77% of C++)</em> <em>For reference only</em></li></ul><h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span><span class="token keyword">public</span><span class="token operator">:</span>    <span class="token keyword">int</span> <span class="token function">romanToDigit</span><span class="token punctuation">(</span><span class="token keyword">char</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">switch</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">case</span> <span class="token string">'I'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'V'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">5</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'X'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">10</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'L'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">50</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'C'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">100</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'D'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">500</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token keyword">case</span> <span class="token string">'M'</span><span class="token operator">:</span>                <span class="token keyword">return</span> <span class="token number">1000</span><span class="token punctuation">;</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">int</span> <span class="token function">romanToInt</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> store<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> last<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>        <span class="token punctuation">{</span>            temp<span class="token operator">=</span><span class="token function">romanToDigit</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            store<span class="token operator">=</span>store<span class="token operator">+</span>temp<span class="token punctuation">;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token operator">></span>last<span class="token punctuation">)</span>                store<span class="token operator">=</span>store<span class="token number">-2</span><span class="token operator">*</span>last<span class="token punctuation">;</span>            last<span class="token operator">=</span>temp<span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> store<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><h2><span id="notes">Notes</span></h2><ul><li>Can add up value of letters first then substract the double of the previous letter if the following letter is larger than the previous one</li><li>Reduce memory usage?</li></ul>]]></content>
     
@@ -231,9 +258,9 @@
     <link href="http://yoursite.com/2020/06/18/hello-world/"/>
     <id>http://yoursite.com/2020/06/18/hello-world/</id>
     <published>2020-06-18T13:24:36.000Z</published>
-    <updated>2021-06-25T07:56:46.650Z</updated>
+    <updated>2021-06-25T08:10:01.011Z</updated>
     
-    <content type="html"><![CDATA[<h2><span id="hello-hexo">Hello HEXO</span></h2><p>A tiny documentation to remind myself the basics of HEXO.</p><h2><span id="hexo">HEXO</span></h2><p>The following commands should be used while pointing the root folder of “blog”.</p><h3><span id="basics">Basics</span></h3><ul><li>blog/_config.yml : Global info of user</li><li>blog/public : Generated website documents</li></ul><h3><span id="blog_configyml">blog/_config.yml</span></h3><ul><li>theme : Change your desired theme to be the same as the name of the folder</li></ul><h3><span id="create-a-new-post">Create a new post</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3><span id="generate-static-files">Generate static files</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo generateor$ hexo g</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3><span id="run-server">Run server</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo serveror$ hexo s</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3><span id="local-address">Local address</span></h3><pre><code>http://localhost:4000</code></pre><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2><span id="hexo-nexteditor">HEXO - NextEditor</span></h2><p>A useful editor interface for “Next” themes.</p><h3><span id="editor-address">Editor address</span></h3><pre><code>http://localhost:2048</code></pre><h3><span id="run-editor-server">Run Editor server</span></h3><p>This commend should be used while pointing the root folder of hexo-editor.</p><p>i.e. blog\themes\hexo-editor&gt;</p><pre><code>npm start</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2><span id="hello-hexo">Hello HEXO</span></h2><p>A tiny documentation to remind myself the basics of HEXO.</p><h2><span id="hexo">HEXO</span></h2><p>The following commands should be used while pointing the root folder of “blog”.</p><h3><span id="basics">Basics</span></h3><ul><li>blog/_config.yml : Global info of user</li><li>blog/theme/_config.yml : Config of theme</li><li>blog/public : Generated website documents</li></ul><h3><span id="blog_configyml">blog/_config.yml</span></h3><ul><li>theme : Change your desired theme to be the same as the name of the folder</li></ul><h3><span id="create-a-new-post">Create a new post</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3><span id="generate-static-files">Generate static files</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo generateor$ hexo g</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3><span id="run-server">Run server</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo serveror$ hexo s</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3><span id="local-address">Local address</span></h3><pre><code>http://localhost:4000</code></pre><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2><span id="hexo-nexteditor">HEXO - NextEditor</span></h2><p>A useful editor interface for “Next” themes.</p><h3><span id="editor-address">Editor address</span></h3><pre><code>http://localhost:2048</code></pre><h3><span id="run-editor-server">Run Editor server</span></h3><p>This commend should be used while pointing the root folder of hexo-editor.</p><p>i.e. blog\themes\hexo-editor&gt;</p><pre><code>npm start</code></pre>]]></content>
     
     <summary type="html">
     
