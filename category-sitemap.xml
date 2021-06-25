@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/categories/Web/</loc>
+        <lastmod>2021-06-25T07:56:46.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/categories/notes/</loc>
         <lastmod>2021-06-01T12:26:47.337Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,13 +24,6 @@
     <url>
         <loc>http://yoursite.com/categories/Coding-practices/</loc>
         <lastmod>2021-03-26T13:41:24.874Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/categories/Web/</loc>
-        <lastmod>2020-06-20T05:46:03.171Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
