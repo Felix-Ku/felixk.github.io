@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Onism</title>
+  <title>Ikigai</title>
   
   <subtitle>Hi, I&#39;m Felix!</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -73,8 +73,8 @@
   
   <entry>
     <title>Django</title>
-    <link href="http://yoursite.com/2021/02/26/Django%20basics%20/"/>
-    <id>http://yoursite.com/2021/02/26/Django%20basics%20/</id>
+    <link href="http://yoursite.com/2021/02/26/Django%20basics/"/>
+    <id>http://yoursite.com/2021/02/26/Django%20basics/</id>
     <published>2021-02-26T12:20:29.000Z</published>
     <updated>2021-06-25T07:57:33.225Z</updated>
     
@@ -227,6 +227,29 @@
   </entry>
   
   <entry>
+    <title>hello-world</title>
+    <link href="http://yoursite.com/2020/07/25/hello-world/"/>
+    <id>http://yoursite.com/2020/07/25/hello-world/</id>
+    <published>2020-07-25T08:34:32.308Z</published>
+    <updated>2021-07-10T05:07:22.220Z</updated>
+    
+    <content type="html"><![CDATA[<p>Option Explicit</p><p>#If VBA7 Then<br>    Private Declare PtrSafe Sub Sleep Lib “kernel32” (ByVal dwMilliseconds As LongPtr)<br>#Else<br>    Private Declare Sub Sleep Lib “kernel32” (ByVal dwMilliseconds As Long)<br>#End If</p><p>Dim chrome As Selenium.ChromeDriver</p><p>Sub CommandButton1_Click()</p><pre><code>&#39;Deal with input text to array sectionDim sFolder As StringWith Application.FileDialog(msoFileDialogFolderPicker)    If .Show = -1 Then &#39; if OK is pressed        sFolder = .SelectedItems(1)    End IfEnd WithIf sFolder &lt;&gt; &quot;&quot; Then    Cells(25, 2) = &quot;RUNNING - Location set&quot;    Cells(27, 2) = sFolder    Dim CntR As Integer    Dim locationIDHead, locationIDTail, locationNameHead, locationNameTail As Integer    Dim ID, ImageName As String    Dim renamePath, urlPath As String    Dim textValue As String    Dim split1() As String    Dim subStr As Variant    Dim ids() As String    Dim names() As String    Dim DQ As String    CntR = 30    DQ = chr(34)    textValue = Replace(TextBox1.Value, DQ, &quot;.&quot;)    split1 = Split(textValue, &quot;,{&quot;)    For Each subStr In split1        locationIDHead = InStr(subStr, &quot;\.imageId\.:\.&quot;)        locationIDTail = InStr(subStr, &quot;\.,\.planType\&quot;)        locationNameHead = InStr(subStr, &quot;drawingTitle\.:\.&quot;)        locationNameTail = InStr(subStr, &quot;\.,\.appDate\.&quot;)        ID = Mid(subStr, locationIDHead + 14, 32)        ImageName = Mid(subStr, locationNameHead + 17, locationNameTail - locationNameHead - 17)        Cells(CntR, 2) = ID        Cells(CntR, 3) = ImageName        ReDim Preserve ids(CntR - 30)        ids(CntR - 30) = ID        ReDim Preserve names(CntR - 30)        names(CntR - 30) = ImageName        CntR = CntR + 1        renamePath = sFolder &amp; &quot;\&quot; &amp; ImageName &amp; &quot;.jpg&quot;        urlPath = &quot;https://bravo.bd.gov.hk/getInspectionPlanImage?imageId=&quot; &amp; ID    Next subStr    Cells(CntR, 2) = &quot;---END---&quot;    Cells(CntR, 3) = &quot;---END---&quot;    &#39;Auto download section    Set chrome = New Selenium.ChromeDriver    chrome.SetPreference &quot;download.default_directory&quot;, sFolder &amp; &quot;\&quot;    chrome.SetPreference &quot;download.directory_upgrade&quot;, True    chrome.SetPreference &quot;download.prompt_for_download&quot;, False    chrome.Start    chrome.Get &quot;https://bravo.bd.gov.hk/login.action&quot;    Sleep 2000    chrome.FindElementById(&quot;txtLoginName&quot;).SendKeys &quot;U3544577@CONNECT.HKU.HK&quot;    chrome.FindElementById(&quot;txtPassword&quot;).SendKeys &quot;Btt12345678&quot;    chrome.FindElementByXPath(&quot;//span[@class=&#39;dijitReset dijitStretch dijitButtonContents&#39;]&quot;).Click    Sleep 2000    chrome.FindElementByXPath(&quot;//span[@class=&#39;dijitReset dijitInline dijitButtonNode&#39;]&quot;).Click    Sleep 2000    chrome.FindElementById(&quot;chBoxdeclarationB&quot;).Click    Sleep 2000    chrome.FindElementByXPath(&quot;//span[@class=&#39;dijitReset dijitInline dijitButtonNode&#39;]&quot;).Click    Sleep 2000    On Error GoTo Oops        chrome.FindElementByXPath(&quot;//span[@class=&#39;dijitReset dijitInline dijitButtonNode&#39;]&quot;).Click        Debug.Print &quot;Force logout&quot;</code></pre><p>Oops:</p><pre><code>    Debug.Print &quot;Entered&quot;    chrome.Open &quot;https://bravo.bd.gov.hk/getInspectionPlanImage?imageId=2fa6dbea601b88a8c7de0f4af294a180&quot;&#39;End of Auto download sectionElse    Cells(25, 2) = &quot;FAIL - Location not set&quot;End If</code></pre><p>End Sub</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Option Explicit&lt;/p&gt;
+&lt;p&gt;#If VBA7 Then&lt;br&gt;    Private Declare PtrSafe Sub Sleep Lib “kernel32” (ByVal dwMilliseconds As LongPtr)&lt;br&gt;#Else&lt;b
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode trial (Q13)</title>
     <link href="http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/"/>
     <id>http://yoursite.com/2020/07/24/Daily%20LEET%20(Q13)/</id>
@@ -250,33 +273,6 @@
     
     
       <category term="Leet code" scheme="http://yoursite.com/tags/Leet-code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello HEXO</title>
-    <link href="http://yoursite.com/2020/06/18/hello-world/"/>
-    <id>http://yoursite.com/2020/06/18/hello-world/</id>
-    <published>2020-06-18T13:24:36.000Z</published>
-    <updated>2021-06-25T08:10:01.011Z</updated>
-    
-    <content type="html"><![CDATA[<h2><span id="hello-hexo">Hello HEXO</span></h2><p>A tiny documentation to remind myself the basics of HEXO.</p><h2><span id="hexo">HEXO</span></h2><p>The following commands should be used while pointing the root folder of “blog”.</p><h3><span id="basics">Basics</span></h3><ul><li>blog/_config.yml : Global info of user</li><li>blog/theme/_config.yml : Config of theme</li><li>blog/public : Generated website documents</li></ul><h3><span id="blog_configyml">blog/_config.yml</span></h3><ul><li>theme : Change your desired theme to be the same as the name of the folder</li></ul><h3><span id="create-a-new-post">Create a new post</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3><span id="generate-static-files">Generate static files</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo generateor$ hexo g</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3><span id="run-server">Run server</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo serveror$ hexo s</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3><span id="local-address">Local address</span></h3><pre><code>http://localhost:4000</code></pre><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2><span id="hexo-nexteditor">HEXO - NextEditor</span></h2><p>A useful editor interface for “Next” themes.</p><h3><span id="editor-address">Editor address</span></h3><pre><code>http://localhost:2048</code></pre><h3><span id="run-editor-server">Run Editor server</span></h3><p>This commend should be used while pointing the root folder of hexo-editor.</p><p>i.e. blog\themes\hexo-editor&gt;</p><pre><code>npm start</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2&gt;&lt;span id=&quot;hello-hexo&quot;&gt;Hello HEXO&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;A tiny documentation to remind myself the basics of HEXO.&lt;/p&gt;
-&lt;h2&gt;&lt;span id=&quot;hexo&quot;&gt;HEXO&lt;/s
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
     
   </entry>
   

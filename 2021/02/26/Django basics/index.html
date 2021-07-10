@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode trial (Q13), Ikigai">
+    <meta name="keywords" content="Django, Ikigai">
     <meta name="description" content="A peaceful place for my thoughts">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode trial (Q13) | Ikigai</title>
+    <title>Django | Ikigai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -207,7 +207,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode trial (Q13)</h1>
+                    <h1 class="description center-align post-title">Django</h1>
                 </div>
             </div>
         </div>
@@ -324,23 +324,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Leet-code/">
-                                <span class="chip bg-color">Leet code</span>
+                            <a href="/tags/django/">
+                                <span class="chip bg-color">django</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Coding-practices/" class="post-category">
-                                Coding practices
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -349,7 +340,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-24
+                    2021-02-26
                 </div>
                 
 
@@ -358,7 +349,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    169
+                    291
                 </div>
                 
 
@@ -375,69 +366,66 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="daily-leet-q13-roman-to-integer">Daily LEET - Q13 (Roman to Integer)</span></h1><p>2020-06-24</p>
-<p><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" rel="noopener">Link to Question</a></p>
-<ul>
-<li>Objective: To convert given roman numeral string into an integer</li>
-<li>Level of difficulty: Easy</li>
-<li>Language used: C++</li>
+                <h2><span id="hello-django">Hello Django</span></h2><p>A tiny documentation to remind myself the basics of Django.</p>
+<h2><span id="setup">Setup</span></h2><ul>
+<li>Name of your app = APPNAME</li>
+<li>Name of your base project = PROJECTNAME</li>
 </ul>
-<h2><span id="result">Result</span></h2><ul>
-<li>Runtime: 4 ms <em>(faster than 98.05%)</em> <em>For reference only</em></li>
-<li>Memory Usage: 6.1 MB <em>(less than 61.77% of C++)</em> <em>For reference only</em></li>
-</ul>
-<h2><span id="code">Code</span></h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-
-    <span class="token keyword">int</span> <span class="token function">romanToDigit</span><span class="token punctuation">(</span><span class="token keyword">char</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">switch</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">case</span> <span class="token string">'I'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'V'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">5</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'X'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">10</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'L'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">50</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'C'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'D'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">500</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token keyword">case</span> <span class="token string">'M'</span><span class="token operator">:</span>
-                <span class="token keyword">return</span> <span class="token number">1000</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">int</span> <span class="token function">romanToInt</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> store<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> last<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            temp<span class="token operator">=</span><span class="token function">romanToDigit</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            store<span class="token operator">=</span>store<span class="token operator">+</span>temp<span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token operator">></span>last<span class="token punctuation">)</span>
-                store<span class="token operator">=</span>store<span class="token number">-2</span><span class="token operator">*</span>last<span class="token punctuation">;</span>
-            last<span class="token operator">=</span>temp<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> store<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h2><span id="notes">Notes</span></h2><ul>
-<li>Can add up value of letters first then substract the double of the previous letter if the following letter is larger than the previous one</li>
-<li>Reduce memory usage?</li>
-</ul>
-
+<h3><span id="setting-up-environment">Setting up environment</span></h3><pre class=" language-bash"><code class="language-bash">pipenv <span class="token function">install</span> django~<span class="token operator">=</span>3.1.5
+pipenv shell</code></pre>
+<pre class=" language-python"><code class="language-python">django<span class="token operator">-</span>admin startproject PROJECTNAME_config
+cd PROJECTNAME_config
+python manage<span class="token punctuation">.</span>py startapp APPNAME</code></pre>
+<h3><span id="register-app-in-settings">Register app in settings</span></h3><p>Register class: PROJECT\apps.py “config class”<br>Register location: config\settings.py[INSTALLED_APPS]</p>
+<p>e.g. “PROJECTNAME.apps.CLASS_NAME”</p>
+<h3><span id="setting-up-models">Setting up models</span></h3><p>Taget file: PROJECT\models.py<br>Add class of tables for database:</p>
+<pre class=" language-python"><code class="language-python">    <span class="token keyword">class</span> <span class="token class-name">Customer</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+        price <span class="token operator">=</span> models<span class="token punctuation">.</span>DecimalField<span class="token punctuation">(</span>max_digits<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> decimal_places<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+        time <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># Add string functions to models</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>name</code></pre>
+<h3><span id="applying-models">Applying models</span></h3><pre class=" language-python"><code class="language-python">python manage<span class="token punctuation">.</span>py makemigrations PROJECT_NAME
+python manage<span class="token punctuation">.</span>py migrate</code></pre>
+<h3><span id="setting-admin-credentials">Setting Admin credentials</span></h3><pre class=" language-python"><code class="language-python">python manage<span class="token punctuation">.</span>py createsuperuser</code></pre>
+<p>Taget file: PROJECT\admin.py<br>Add:</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> <span class="token operator">*</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Model_Class_Name<span class="token punctuation">)</span></code></pre>
+<h3><span id="implement-view">Implement view</span></h3><p>Taget file: PROJECT\admin.py<br>Add:</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> djang<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+    <span class="token comment" spellcheck="true"># Create your views here.</span>
+    <span class="token keyword">def</span> <span class="token function">myView</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"Hello, user!"</span><span class="token punctuation">)</span></code></pre>
+<h3><span id="setting-template-locations">Setting template locations</span></h3><p>Taget file: CONFIG\settings.py<br>Add:</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> os</code></pre>
+<p>Update:</p>
+<pre class=" language-python"><code class="language-python">TEMPLATES <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">'DIRS'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'templates'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># BASE_DIR\templates\</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span></code></pre>
+<h3><span id="create-template-html">Create template html</span></h3><p>Target folder: BASE_DIR\templates<br>Create: html files for index page and so on</p>
+<h3><span id="defined-class-based-view">Defined class-based view</span></h3><p>Taget file: PROJECT\views.py<br>Add:</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>views<span class="token punctuation">.</span>generic <span class="token keyword">import</span> TemplateView
+<span class="token keyword">from</span> PROJECT<span class="token punctuation">.</span>models <span class="token keyword">import</span> TABLE_CLASS<span class="token punctuation">,</span> TABLE_CLASS
+<span class="token keyword">class</span> <span class="token class-name">CLASS_NAME</span><span class="token punctuation">(</span>TemplateView<span class="token punctuation">)</span><span class="token punctuation">:</span></code></pre>
+<h3><span id="setting-url-dispatcher">Setting URL dispatcher</span></h3><p>Taget file: CONFIG\urls.py<br>Add:</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> include<span class="token punctuation">,</span> path
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+            path<span class="token punctuation">(</span><span class="token string">"admin/"</span><span class="token punctuation">,</span> admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">(</span><span class="token string">"PROJECT/"</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">"PROJECT.urls"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span></code></pre>
+<p>Create PROJECT\urls.py</p>
+<h2><span id="forms">Forms</span></h2><h3><span id="drop-down-box-form">Drop-down box form</span></h3><h3><span id="dialog-box-input-form">Dialog box input form</span></h3><h2><span id="deploying-to-cloud">Deploying to cloud</span></h2><h3><span id="heroku-setup">Heroku setup</span></h3><h3><span id="deployment">Deployment</span></h3><p>Deploying:</p>
+<pre class=" language-git"><code class="language-git">git add .; git commit -m <span class="token string">"add requirements.txt"</span>; git push heroku master
+git commit -am <span class="token string">"xxxyyzzz"</span>    
+git push heroku master</code></pre>
+<p>Check log: </p>
+<pre class=" language-base"><code class="language-base">heroku logs --tail</code></pre>
+<p>Testing local heroku:</p>
+<pre class=" language-python"><code class="language-python">pipenv shell
+heroku run python manage<span class="token punctuation">.</span>py runserver</code></pre>
+<h2><span id="switch-database">Switch database</span></h2><h3><span id="postgresql">PostgreSQL</span></h3><h3><span id="sql-lite">Sql lite</span></h3><h2><span id="useful-commands">Useful commands</span></h2>
             </div>
             <hr/>
 
@@ -450,8 +438,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Leet-code/">
-                                    <span class="chip bg-color">Leet code</span>
+                                <a href="/tags/django/">
+                                    <span class="chip bg-color">django</span>
                                 </a>
                             
                         </div>
@@ -497,26 +485,83 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/07/25/hello-world/">
+                <a href="/2021/06/01/Ubuntu%20notes/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hello-world">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Ubuntu notes">
                         
-                        <span class="card-title">hello-world</span>
+                        <span class="card-title">Ubuntu notes</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Option Explicit
-#If VBA7 Then    Private Declare PtrSafe Sub Sleep Lib “kernel32” (ByVal dwMilliseconds As LongPtr)#Else
+                            Ubuntu notesNotes for problems during installation and setting up dual operating system (Windows 10 &amp; Ubuntu)
+Instal
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/notes/" class="post-category">
+                                    notes
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/17/SQL%20basics/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="SQL">
+                        
+                        <span class="card-title">SQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Hello SQLA tiny documentation to remind myself the basics of SQL.
+DBMSComponents\\\
+Concepts
+Data abstraction
+Data model
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -526,55 +571,10 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/07/24/Daily%20LEET%20(Q13)/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="LeetCode trial (Q13)">
-                        
-                        <span class="card-title">LeetCode trial (Q13)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Daily LEET - Q13 (Roman to Integer)2020-06-24
-Link to Question
-
-Objective: To convert given roman numeral string into an
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Coding-practices/" class="post-category">
-                                    Coding practices
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Leet-code/">
-                        <span class="chip bg-color">Leet code</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
