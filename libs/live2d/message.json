@@ -1,1 +1,18 @@
-{"mouseover":[{"selector":".title a","text":["Wanna have a look at {text} ？"]},{"selector":".searchbox","text":["What are you looking for? Meow"]}],"click":[{"selector":"#landlord #live2dcanvas","text":["Pet me!! Meow~","With your eyes only! Meow!","Hiss!","So you have chosen death! Meow!","And your hand is gonna come off!"]}]}
+{
+    "mouseover": [
+        {
+            "selector": ".title a",
+            "text": ["Meow"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["Meow"]
+        }
+    ],
+    "click": [
+        {
+            "selector": "#landlord #live2dcanvas",
+            "text": ["Meow"]
+        }
+    ]
+}
